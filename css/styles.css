@@ -1,0 +1,294 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    background-color: var(--white-color);
+    font-family: 'Rubik', sans-serif;
+}
+
+ul,
+ol {
+    padding: 0;
+    list-style: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    --general-color: #232020;
+    --white-color: #F4F4F4;
+    --gray: #777777;
+    --text: #2F2F2F;
+    --pink: #FF9EAA;
+}
+
+.header {
+    background-color: var(--general-color);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 32px 0;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+
+.header-title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+.header-container {
+    max-width: 1158px;
+    margin: 0 auto;
+}
+
+.header-link {
+    color: var(--white-color);
+    position: relative;
+}
+
+.header-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 1.5px;
+    background-color: var(--pink);
+}
+
+.header-link::before {
+    transition: width 0.35s;
+}
+
+.header-link:hover:before,
+.header-link:focus:before {
+    width: 100%;
+}
+
+/* bio-section */
+
+.img-bio {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+}
+
+.bio-title {
+    line-height: 1.1;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.bio-p {
+    font-size: 16px;
+    line-height: 1.1;
+    color: var(--gray);
+}
+
+.list-bio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.item-bio:nth-child(1) {
+    margin-bottom: 16px;
+}
+
+.item-bio:nth-child(2) {
+    margin-bottom: 8px;
+}
+
+.bio-container {
+    max-width: 1158px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 80px 0;
+}
+
+.about-me {
+    max-width: 640px;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text);
+}
+
+.about-me-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-about-me {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    line-height: 1.1;
+}
+
+.title-about-me::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: var(--pink);
+    border-radius: 1px;
+}
+
+/* links */
+
+.cont-item {
+    background-color: var(--general-color);
+    color: var(--white-color);
+    padding: 16px 32px;
+    width: 100%;
+    text-align: right;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.link-container {
+    max-width: 1158px;
+    margin: 0 auto;
+    padding: 80px 0;
+}
+
+.link-list {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.svg-link {
+    max-width: 32px;
+    max-height: 32px;
+    fill: var(--white-color);
+}
+
+.cont-item:is(:hover, :focus) {
+    color: var(--gray);
+}
+
+.cont-item:is(:hover, :focus) .svg-link {
+    fill: var(--gray);
+}
+.cont-item:active {
+    color: var(--text);
+}
+
+.cont-item:active .svg-link {
+    fill: var(--text);
+}
+
+/* .svg-link:hover {
+    fill: var(--white-color);
+} */
+
+.link-item {
+    margin-bottom: 32px;
+}
+
+.link-item:last-child {
+    margin-bottom: 0;
+}
+
+.title-link {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.1;
+    max-width: fit-content;
+    margin: 0 auto 20px auto;
+}
+
+.title-link::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: var(--pink);
+    border-radius: 1px;
+}
+
+/* portfolio */
+
+.portfolio-cont {
+    max-width: 1158px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 0;
+    margin: 0 auto;
+}
+
+.comming-soon {
+    background-color: var(--text);
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--white-color);
+    border-radius: 10px;
+    width: 100%;
+    max-width: 640px;
+    text-align: center;
+    padding: 100px 16px;
+}
+
+@media screen and (max-width: 768px) {
+    .link-container {
+        padding: 40px 16px;
+    }
+
+    .bio-container {
+        padding: 40px 16px;
+    }
+
+    .portfolio-cont {
+        padding: 40px 16px;
+    }
+
+    .about-me {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.1;
+    }
+}
